@@ -11,7 +11,9 @@
         <h1> Новостной портал </h1>
         <div> 
             <div class="article">
-                <em> Опубликовано: </em>     
+		    <h3> <?=$article['title']?> </h3>
+                <em> Опубликовано: </em>  
+		    <p> <?=$article['content']?> </p>
             </div>
         </div>     
     </div>
