@@ -15,8 +15,12 @@
         <a>Панель администратора</a>
         <div class="blog">
             <div>
-                <h3>Заголовок</h3>
-                <em>Опубликовано:</em>
+                <h3><a href="article.php?id=<?=$a['id']?>">
+			<?=$a['title']?>
+			Заголовок
+			</a></h3>
+                <em>Опубликовано: <?=$a['date']?></em>
+		    <p><?=articles_intro($a['content'])?>...</p>
             </div>
         </div>
 </body>
