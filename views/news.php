@@ -12,7 +12,17 @@
         <div class="hellopage">
         </div>
         <a>Панель администратора</a>
-        <div class="blog">
-        </div>
+        
+        <?php foreach ($articles as $a): ?>
+            <div>
+                <h3><a href="article.php?id=<?=$a['id']?>">
+                        <?=$a['title']?>
+                        Заголовок
+                    </a></h3>
+                <em>Опубликовано:<?=$a['date']?></em>
+                <p><?=articles_intro($a['content'])?>...</p>
+            </div>
+        <?php endforeach ?>
+      
 </body>
 </html>
